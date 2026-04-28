@@ -365,7 +365,7 @@ WITH (
 ```sql
 select * from events_data;
 ```
-[![Create Table](./images/soap_output.png)]()
+[![Create Table](./images/json_input.png)]()
 
 <a id="eoi-output-sink-table"></a>
 
