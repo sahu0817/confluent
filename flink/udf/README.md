@@ -334,6 +334,11 @@ WITH (
   'value.fields-include' = 'all',
   'value.format' = 'avro-registry'
 )
+
+```sql
+select * from events_data;
+```
+[![Create Table](./images/soap_output.png)]()
 ```
 ### Create a output table
 
@@ -402,7 +407,7 @@ SELECT
 ```sql
 select * from `eoi_event_soap`
 ```
-[![Create Table](./images/json_soap.png)]()
+[![Create Table](./images/soap_output.png)]()
 
 ---
 
