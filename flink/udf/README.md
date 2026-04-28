@@ -3,7 +3,27 @@
 This guide walks through building and operating a **Flink SQL scalar UDF** in Java that accepts a **JSON string**  and returns a **SOAP 1.1 XML string** envelope).
 
 
-That module uses **Jackson** to parse JSON, **JDOM2** to build namespaced SOAP XML, **`ScalarFunction`** for Flink SQL, and a  **`exec-maven-plugin`** entry point for local checks without a cluster.
+The module uses **Jackson** to parse JSON, **JDOM2** to build namespaced SOAP XML, **`ScalarFunction`** for Flink SQL, and a  **`exec-maven-plugin`** entry point for local checks without a cluster.
+
+## Contents
+
+- [What you are building](#what-you-are-building)
+- [Prerequisites](#prerequisites)
+- [1. Implement and unit-test locally](#1-implement-and-unit-test-locally)
+- [2. Build the JAR you will upload to Flink](#2-build-the-jar-you-will-upload-to-flink)
+- [3. Manual check without Flink (Maven)](#3-manual-check-without-flink-maven)
+- [4. Manual check using only the shaded JAR](#4-manual-check-using-only-the-shaded-jar)
+- [5. Register the JAR on Confluent Cloud Flink](#5-register-the-jar-on-confluent-cloud-flink)
+- [6. Create the SQL function in Flink](#6-create-the-sql-function-in-flink)
+- [7. Create a topic & schema that matches this payload](#topic-schema-payload)
+- [8. Call the UDF from SQL](#8-call-the-udf-from-sql)
+  - [Verify the inferred Flink table from the `events_data` input topic](#verify-events-data-table)
+  - [Create a output table](#eoi-output-sink-table)
+  - [Run the Flink job to read the events from the input topic and use UDF](#eoi-udf-insert-job)
+  - [Validate the output](#eoi-validate-query)
+- [Reference samples](#reference-samples)
+- [See also](#see-also)
+
 
 ---
 
@@ -221,6 +241,8 @@ Details: Function 'json_to_soap' created.
 
 ---
 
+<a id="topic-schema-payload"></a>
+
 ## 7. Create a topic & schema that matches this payload
 
 topic: events_data
@@ -305,6 +327,8 @@ The UDF expects a **single JSON object string**. If your table has typed columns
 
 Example pattern matching the reference `events_data` shape:
 
+<a id="verify-events-data-table"></a>
+
 ### Verify the inferred flink table from the events_data input topic
 
 ```sql
@@ -343,6 +367,8 @@ select * from events_data;
 ```
 [![Create Table](./images/soap_output.png)]()
 
+<a id="eoi-output-sink-table"></a>
+
 ### Create a output table
 
 ```sql
@@ -361,6 +387,8 @@ CREATE TABLE eoi_event_soap (
   'value.format' = 'avro-registry'
 )
 ```
+
+<a id="eoi-udf-insert-job"></a>
 
 ### Run the flink job to read the events from the input topic and use UDF 
 ```sql
@@ -404,6 +432,8 @@ SELECT
   )
  FROM events_data;
 ```
+
+<a id="eoi-validate-query"></a>
 
 ### Validate the output
 
