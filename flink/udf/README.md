@@ -111,7 +111,7 @@ mvn -q compile exec:java -Dexec.args="/absolute/path/to/eoi_decision_sample.json
 
 ## 4. Manual check using only the shaded JAR
 
-Run **`java`** from the **same directory that contains** `target/eoi-decision-to-soap-udf-1.0.0.jar`. If your shell is in a parent folder, `-cp target/...` will not resolve and you will get `ClassNotFoundException`.
+Run **`java`** from the **same directory that contains** `target/eoi-decision-to-soap-udf-1.0.0.jar`.  
 
 ```bash
 cd /path/to/confluent/flink/udf
@@ -402,6 +402,7 @@ SELECT
 ```sql
 select * from `eoi_event_soap`
 ```
+[![Create Table](./images/json_soap.png)]()
 
 ---
 
