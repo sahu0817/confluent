@@ -297,6 +297,8 @@ Value-Schema
 }
 ```
 
+Use the eoi_decision_sample.json file as a reference and produce couple of messages modifying the key worker_id at the minimum.
+
 ## 8. Call the UDF from SQL
 
 The UDF expects a **single JSON object string**. If your table has typed columns instead of a JSON column, build the JSON in SQL (mind quoting and escaping in production; consider a safer serialization path if your platform offers one).
@@ -334,12 +336,13 @@ WITH (
   'value.fields-include' = 'all',
   'value.format' = 'avro-registry'
 )
+```
 
 ```sql
 select * from events_data;
 ```
 [![Create Table](./images/soap_output.png)]()
-```
+
 ### Create a output table
 
 ```sql
