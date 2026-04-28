@@ -1,0 +1,12 @@
+{
+  "doc": "Sample schema to help you get started.",
+  "fields": [
+    {
+      "name": "worker_id",
+      "type": "string"
+    }
+  ],
+  "name": "sampleRecord",
+  "namespace": "com.mycorp.mynamespace",
+  "type": "record"
+}

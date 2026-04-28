@@ -1,0 +1,11 @@
+{
+  "worker_id": "11111111",
+  "worker_id_type": "Employee_ID",
+  "worker_descriptor": null,
+  "benefit_plan_id": "EMPLOYER_SPECIFIC_PLAN_CODE_VALUE",
+  "benefit_plan_id_type": "Benefit_Plan_ID",
+  "benefit_plan_descriptor": null,
+  "approve_for_selected": false,
+  "deny_for_selected": true,
+  "eoi_decision_date": "2023-10-27"
+}

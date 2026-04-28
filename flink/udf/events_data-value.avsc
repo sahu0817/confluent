@@ -1,0 +1,54 @@
+{
+  "fields": [
+    {
+      "name": "worker_id",
+      "type": "string"
+    },
+    {
+      "name": "worker_id_type",
+      "type": "string"
+    },
+    {
+      "default": null,
+      "name": "worker_descriptor",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "benefit_plan_id",
+      "type": "string"
+    },
+    {
+      "name": "benefit_plan_id_type",
+      "type": "string"
+    },
+    {
+      "default": null,
+      "name": "benefit_plan_descriptor",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "approve_for_selected",
+      "type": "boolean"
+    },
+    {
+      "name": "deny_for_selected",
+      "type": "boolean"
+    },
+    {
+      "name": "eoi_decision_date",
+      "type": {
+        "logicalType": "date",
+        "type": "string"
+      }
+    }
+  ],
+  "name": "WorkerBenefitDecision",
+  "namespace": "com.example",
+  "type": "record"
+}

@@ -1,0 +1,5 @@
+/home/ubuntu/customer/standard/udf/src/main/java/com/standard/flink/eoi/cli/EoiDecisionToSoapCli.java
+/home/ubuntu/customer/standard/udf/src/main/java/com/standard/flink/eoi/model/EoiDecision.java
+/home/ubuntu/customer/standard/udf/src/main/java/com/standard/flink/eoi/soap/EoiDecisionToSoapXml.java
+/home/ubuntu/customer/standard/udf/src/main/java/com/standard/flink/eoi/udf/EoiDecisionJsonToSoapXmlTableUdf.java
+/home/ubuntu/customer/standard/udf/src/main/java/com/standard/flink/eoi/udf/EoiDecisionJsonToSoapXmlUdf.java

@@ -1,0 +1,5 @@
+com/standard/flink/eoi/udf/EoiDecisionJsonToSoapXmlTableUdf.class
+com/standard/flink/eoi/model/EoiDecision.class
+com/standard/flink/eoi/soap/EoiDecisionToSoapXml.class
+com/standard/flink/eoi/udf/EoiDecisionJsonToSoapXmlUdf.class
+com/standard/flink/eoi/cli/EoiDecisionToSoapCli.class

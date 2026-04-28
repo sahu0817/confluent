@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:bsvc="urn:com.workday/bsvc">
+  <soap:Body>
+    <bsvc:Put_Evidence_of_Insurability_Request bsvc:version="v42.0">
+      <bsvc:Evidence_of_Insurability_Data>
+        <bsvc:Worker_Reference bsvc:Descriptor="string">
+          <bsvc:ID bsvc:type="Employee_ID">11111111</bsvc:ID>
+        </bsvc:Worker_Reference>
+        <bsvc:Benefit_Plan_Reference bsvc:Descriptor="string">
+          <bsvc:ID bsvc:type="Benefit_Plan_ID">EMPLOYER_SPECIFIC_PLAN_CODE_VALUE</bsvc:ID>
+        </bsvc:Benefit_Plan_Reference>
+        <bsvc:Approve_for_selected>false</bsvc:Approve_for_selected>
+        <bsvc:Deny_for_selected>true</bsvc:Deny_for_selected>
+        <bsvc:EOI_Approve_Or_Deny_Date>2023-10-27</bsvc:EOI_Approve_Or_Deny_Date>
+      </bsvc:Evidence_of_Insurability_Data>
+    </bsvc:Put_Evidence_of_Insurability_Request>
+  </soap:Body>
+</soap:Envelope>
