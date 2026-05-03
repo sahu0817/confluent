@@ -1,0 +1,19 @@
+{
+  "fields": [
+    {
+      "name": "foo_string",
+      "type": "string"
+    },
+    {
+      "name": "foo_dynamic",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    }
+  ],
+  "name": "schema_validation",
+  "namespace": "btest.com",
+  "type": "record"
+}

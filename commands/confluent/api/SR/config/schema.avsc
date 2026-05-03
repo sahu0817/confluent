@@ -1,0 +1,15 @@
+{
+    "name": "srini_test-value",
+    "namespace": "suncor.com",
+    "type": "record",
+    "fields": [
+      {
+        "name": "foo_string",
+        "type": "string"
+      },
+      {
+        "name": "foo_int",
+        "type": "int"
+      }
+    ]
+}

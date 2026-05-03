@@ -1,0 +1,20 @@
+{
+  "aggregations": [
+    {
+      "metric": "io.confluent.kafka.server/active_connection_count"
+    }
+  ],
+  "filter": {
+    "field": "resource.kafka.id",
+    "op": "EQ",
+    "value": "lkc-3w6270"
+  },
+  "granularity": "PT1H",
+  "group_by": [
+    "metric.principal_id"
+  ],
+  "intervals": [
+    "2024-05-08T00:00:00Z/PT1H"
+  ],
+  "limit": 5
+}

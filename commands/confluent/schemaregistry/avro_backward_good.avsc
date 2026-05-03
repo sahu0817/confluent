@@ -1,0 +1,8 @@
+{
+ "namespace": "io.confluent.examples",
+ "type": "record",
+ "name": "backward_test",
+ "fields": [
+    {"name": "seq", "type": "int"},
+    {"name": "custid", "type": "int", "default": 123}]
+}

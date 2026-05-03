@@ -1,0 +1,24 @@
+{
+  "partition_id": 0,
+  "headers": [
+    {
+      "name": "Header-1",
+      "value": "SGVhZGVyLTE="
+    },
+    {
+      "name": "Header-2",
+      "value": "SGVhZGVyLTI="
+    }
+  ],
+  "key": {
+    "type": "JSON",
+    "data": "key3"
+  },
+  "value": {
+    "type": "JSON",
+    "data": {
+      "foo": "bar3"
+    }
+  },
+  "timestamp": "2022-12-03T22:14:42Z"
+}

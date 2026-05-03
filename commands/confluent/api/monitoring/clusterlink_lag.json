@@ -1,0 +1,20 @@
+{
+    "aggregations": [
+        {
+            "metric": "io.confluent.kafka.server/cluster_link_mirror_topic_offset_lag"
+        }
+    ],
+    "filter": {
+        "field": "resource.kafka.id",
+        "op": "EQ",
+        "value": "lkc-1w9gn5"
+    },
+    "granularity": "PT1M",
+    "group_by": [
+        "metric.topic"
+    ],
+    "intervals": [
+        "2023-11-30T07:00:00Z/2023-11-30T08:00:00Z"
+    ],
+    "limit": 25
+}

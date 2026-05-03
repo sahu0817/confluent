@@ -1,0 +1,15 @@
+{
+  "name": "flink-test",
+  "organization_id": "4c8541f7-cc3f-44af-a366-ad4de432fe24",
+  "environment_id": "env-z3y7v3",
+  "spec": {
+    "statement": "SELECT * FROM TABLE WHERE VALUE1 = VALUE2;",
+    "properties": {
+      "sql.current-catalog": "env-z3y7v3",
+      "sql.current-database": "lkc-1w9gn5"
+    },
+    "compute_pool_id": "lfcp-mz311w",
+    "principal": "u-1jqq8v",
+    "stopped": false
+  }
+}

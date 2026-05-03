@@ -1,0 +1,19 @@
+{
+  "schema": 
+  "{
+    \"name\": \"srinitest\",
+    \"namespace\": \"confluent.io\",
+    \"type\": \"record\",
+    \"fields\": [
+      {
+        \"name\": \"foo_string\",
+        \"type\": \"string\"
+      },
+      {
+        \"name\": \"foo_int\",
+        \"type\": \"int\"
+      }
+    ]
+  }",
+  "schemaType": "AVRO"
+}

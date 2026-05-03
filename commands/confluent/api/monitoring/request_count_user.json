@@ -1,0 +1,31 @@
+{
+  "aggregations": [
+    {
+      "metric": "io.confluent.kafka.server/request_count"
+    }
+  ],
+  "filter": {
+    "op" : "AND",
+    "filters" : [
+      {
+	"field": "resource.kafka.id",
+	"op": "EQ",
+	"value": "lkc-3w6270"
+      },
+      {
+	"field": "metric.principal_id",
+	"op": "EQ",
+	"value": "u-1jqq8v"
+      }
+    ]
+  },
+  "group_by": [
+    "metric.principal_id"
+  ],
+  "format": "GROUPED",
+  "granularity": "PT1H",
+  "intervals": [
+    "2024-06-21T02:40:01Z/2024-06-21T18:40:01Z"
+  ],
+  "limit": 10000
+}

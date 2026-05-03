@@ -1,0 +1,15 @@
+{
+  "fields": [
+    {
+      "name": "foo_string",
+      "type": "string"
+    },
+    {
+      "name": "foo_int",
+      "type": "int"
+    }
+  ],
+  "name": "schema_validation",
+  "namespace": "btest.com",
+  "type": "record"
+}

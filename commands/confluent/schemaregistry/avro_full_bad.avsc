@@ -1,0 +1,9 @@
+{
+ "namespace": "io.confluent.examples",
+ "type": "record",
+ "name": "full_test",
+ "fields": [
+    {"name": "seq", "type": "int"},
+    {"name": "xyz", "type": "int"},
+    {"name": "emp", "type": "int"}]
+}
