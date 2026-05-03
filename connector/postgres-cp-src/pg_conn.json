@@ -1,0 +1,20 @@
+{
+  "name": "pg_conn",
+  "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+  "database.hostname": "18.220.31.188",
+  "database.port": "5432",
+  "database.dbname": "pgtest",
+  "database.user": "postgres",
+  "database.password": "xxxxxxxx",
+  "kafka.api.key": "XA73WXXXXXXXXX",
+  "kafka.api.secret": "5PKVoWuvXXXXXXXXXXXXXXXXXXXX",
+  "kafka.endpoint": "SASL_SSL://pkc-921jm.us-east-2.aws.confluent.cloud:9092",
+  "output.data.format": "AVRO",
+  "table.whitelist": "movies",
+  "tasks.max": "1",
+  "mode": "timestamp",
+  "timestamp.column.name": "ts",
+  "topic.prefix": "pgsource.",
+  "slot.name": "debezium",
+  "plugin.name": "pgoutput"
+}

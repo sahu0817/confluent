@@ -1,0 +1,13 @@
+integrations:
+- name: nri-jmx
+  env:
+    COLLECTION_FILES: "/etc/newrelic-infra/integrations.d/kafka-metrics.yml"
+    JMX_HOST: 18.220.31.188
+    JMX_PASS: admin
+    JMX_PORT: "9876"
+    JMX_USER: admin    
+    REMOTE_MONITORING: "true"
+    METRIC_LIMIT: 0
+  interval: 1m
+  labels:
+    env: kafka-connect-local

@@ -1,0 +1,23 @@
+{
+  "type": "record",
+  "namespace": "natus.com",
+  "name": "sampleRecord",
+  "doc": "Sample schema to help you get started.",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string",
+      "doc": "The string is a unicode character sequence."
+    },
+    {
+      "name": "empid",
+      "type": "int",
+      "doc": "The int type is a 32-bit signed integer."
+    },
+    {
+      "name": "city",
+      "type": "string",
+      "doc": "The double type is a double precision (64-bit) IEEE 754 floating-point number."
+    }
+  ]
+}

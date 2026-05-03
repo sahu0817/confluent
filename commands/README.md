@@ -1,1 +1,1 @@
-# Repo for commands in various platforms.
+Frequently used commands in Confluent

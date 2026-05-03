@@ -1,0 +1,21 @@
+---
+version: '2'
+services:
+
+  sqldata:
+    # *-----------------------------*
+    # To connect to the DB:
+    #   docker exec -it mssql bash -c 'mysql -u root -p$MYSQL_ROOT_PASSWORD demo'
+    # *-----------------------------*
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - SA_PASSWORD=Srinivas@1
+      - ACCEPT_EULA=Y
+      - MSSQL_AGENT_ENABLED=true
+    container_name: mssql
+    ports:
+      - "5434:1433"
+    volumes:
+    # 1st field is named volume, 2nd field is the path wher the file or dir are mounted in container, 3rd field is optional and comma seperated options of access
+     - ${PWD}/data/mssql:/docker-entrypoint-initdb.d
+     - ${PWD}/data:/data

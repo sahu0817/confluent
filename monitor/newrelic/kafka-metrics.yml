@@ -1,0 +1,43 @@
+---
+# Standard Kafka Connect Metrics
+collect:
+  - domain: kafka.connect
+    event_type: JMXKafkaConnect
+    beans:
+      - query: type=connector-metrics,connector=*
+        attributes:
+          - status
+      - query: type=connect-worker-metrics
+        attributes:
+          - task-count
+          - connector-count
+          - connector-startup-attempts-total
+          - connector-startup-success-percentage
+          - task-startup-attempts-total
+          - task-startup-success-percentage
+      - query: type=connector-task-metrics,connector=*,task=*
+        attributes:
+          - status
+          - running-ratio
+          - offset-commit-success-percentage
+          - batch-size-max
+          - batch-size-avg
+      - query: type=sink-task-metrics,connector=*,task=*
+        attributes:
+          - sink-record-read-rate
+          - sink-record-send-rate
+          - partition-count
+      - query: type=connect-metrics,client-id=*
+        attributes:
+          - connection-count
+          - connection-creation-rate
+          - failed-authentication-rate
+          - io-ratio
+          - io-wait-ratio
+          - network-io-rate
+          - request-rate
+          - request-size-avg
+          - response-rate
+      - query: type=task-error-metrics,connector=*,task=*
+        attributes:
+          - deadletterqueue-produce-requests

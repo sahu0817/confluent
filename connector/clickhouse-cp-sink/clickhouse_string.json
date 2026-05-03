@@ -1,0 +1,19 @@
+{
+  "name": "simple",
+  "connector.class": "com.clickhouse.kafka.connect.ClickHouseSinkConnector",
+  "tasks.max": "1",
+  "topics": "simple",
+  "jdbcConnectionProperties": "?ssl=true&sslmode=STRICT",
+  "security.protocol": "SSL",
+  "hostname": "ngou9aj9le.us-east-1.aws.clickhouse.cloud",
+  "database": "default",
+  "username": "default",
+  "password": "NRZ*****~Zf",
+  "port": "8443",
+  "value.converter.schemas.enable": "false",
+  "value.converter": "org.apache.kafka.connect.storage.StringConverter",
+  "exactlyOnce": "true",
+  "schemas.enable": "false",
+  "customInsertFormat": "true",
+  "insertFormat": "CSV"
+}

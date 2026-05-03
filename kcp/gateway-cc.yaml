@@ -1,0 +1,35 @@
+apiVersion: platform.confluent.io/v1beta1
+kind: Gateway
+metadata:
+  labels:
+    app.kubernetes.io/name: confluent-for-kubernetes
+    app.kubernetes.io/managed-by: kustomize
+  name: confluent-gateway-cc
+spec:
+  replicas: 3
+  image:
+    application: confluentinc/cpc-gateway:latest
+    init: confluentinc/confluent-init-container:3.2.0
+  streamingDomains:
+    - name: cc-kafka-cluster
+      type: kafka
+      kafkaCluster:
+        bootstrapServers:
+          - id: cc-bootstrap
+            endpoint: "pkc-09zmdp.us-east-1.aws.confluent.cloud:9092"
+            tls: {}   # Confluent Cloud cert is signed by Public CAs, so default truststore works
+        nodeIdRanges:
+          - name: cc-brokers
+            start: 0
+            end: 11
+  routes:
+    - name: cc-passthrough-route
+      endpoint: gateway.example.com:9595
+      brokerIdentificationStrategy:
+        type: port
+      streamingDomain:
+        name: cc-kafka-cluster
+        bootstrapServerId: cc-bootstrap
+      security:
+        auth: passthrough
+
