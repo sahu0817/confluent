@@ -28,6 +28,15 @@ curl --request GET \
 --url 'https://psrc-4r3n1.us-central1.gcp.confluent.cloud/${subject}/versions/latest' \
 --header 'Authorization: Basic '$SR_AUTH64'' | jq '.'
 ```
+
+#### Timestamp of a specific version of the subject registered
+Note: Additional header that gives the timestamp
+```
+curl --request GET \
+--url 'https://psrc-4r3n1.us-central1.gcp.confluent.cloud/${subject}/versions/3' \
+--header "Confluent-Accept-Unknown-Properties: true" \
+--header 'Authorization: Basic '$SR_AUTH64'' | jq '.'
+```
 #### Provision schema
 ```
 curl -s --request POST \
