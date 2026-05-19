@@ -1,6 +1,7 @@
 ## Contents
 - [List Subjects](#List-Subjects)
 - [Fetch latest version of schema](#Fetch-latest-version-of-schema)
+- [Timestamp when a subject was registered](#Timestamp-when-a-subject-was-registered)
 - [Provision schema](#Provision-schema)
 - [Provision schema in specific context](#Provision-schema-in-specific-context)
 - [Get schema compatibility mode](#Get-schema-compatibility-mode)
@@ -29,7 +30,7 @@ curl --request GET \
 --header 'Authorization: Basic '$SR_AUTH64'' | jq '.'
 ```
 
-#### Timestamp of a specific version of the subject registered
+#### Timestamp when a subject was registered
 Note: Additional header that gives the timestamp
 ```
 curl --request GET \
